@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="240">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0512" />
+      <stop offset="50%" stop-color="#150d24" />
+      <stop offset="100%" stop-color="#090410" />
+    </linearGradient>
+    <linearGradient id="pacYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#facc15" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  </style>
+
+  <!-- Border & Frame -->
+  <rect x="2" y="2" width="896" height="236" rx="12" fill="url(#bg)" stroke="#1f1433" stroke-width="2" />
+  <rect x="8" y="8" width="884" height="224" rx="8" fill="none" stroke="#e879f9" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.25" />
+
+  <!-- Maze Path Lines (Top & Bottom) -->
+  <path d="M 40 40 L 220 40 L 220 70 L 140 70" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" opacity="0.4" />
+  <path d="M 680 70 L 760 70 L 760 40 L 860 40" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" opacity="0.4" />
+  <path d="M 40 200 L 220 200 L 220 170" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" opacity="0.4" />
+  <path d="M 760 170 L 760 200 L 860 200" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" opacity="0.4" />
+
+  <!-- Dots & Energizer -->
+  <circle cx="260" cy="40" r="3" fill="#fef08a" opacity="0.6" />
+  <circle cx="290" cy="40" r="3" fill="#fef08a" opacity="0.6" />
+  <circle cx="320" cy="40" r="3" fill="#fef08a" opacity="0.6" />
+  <circle cx="350" cy="40" r="6" fill="#facc15" opacity="0.8" />
+  <circle cx="580" cy="40" r="3" fill="#fef08a" opacity="0.6" />
+  <circle cx="610" cy="40" r="3" fill="#fef08a" opacity="0.6" />
+  <circle cx="640" cy="40" r="3" fill="#fef08a" opacity="0.6" />
+
+  <!-- Pacman Icon & Ghost on bottom right -->
+  <g transform="translate(680, 105) scale(0.9)">
+    <!-- Ghost (Blinky) -->
+    <path d="M 0 25 C 0 10 10 0 20 0 C 30 0 40 10 40 25 L 40 38 L 33 32 L 26 38 L 20 32 L 14 38 L 7 32 L 0 38 Z" fill="#ef4444" />
+    <circle cx="12" cy="15" r="5" fill="#ffffff" />
+    <circle cx="28" cy="15" r="5" fill="#ffffff" />
+    <circle cx="14" cy="15" r="2.5" fill="#1e3a8a" />
+    <circle cx="30" cy="15" r="2.5" fill="#1e3a8a" />
+  </g>
+  <g transform="translate(760, 105) scale(0.9)">
+    <!-- Pacman -->
+    <path d="M 20 20 L 38 7 A 20 20 0 1 0 38 33 Z" fill="url(#pacYellow)" />
+  </g>
+
+  <!-- Corner Brackets -->
+  <path d="M 16 32 L 16 16 L 32 16" fill="none" stroke="#facc15" stroke-width="2" />
+  <path d="M 884 32 L 884 16 L 868 16" fill="none" stroke="#facc15" stroke-width="2" />
+  <path d="M 16 208 L 16 224 L 32 224" fill="none" stroke="#facc15" stroke-width="2" />
+  <path d="M 884 208 L 884 224 L 868 224" fill="none" stroke="#facc15" stroke-width="2" />
+
+  <!-- Header Titles -->
+  <text x="450" y="52" text-anchor="middle" fill="#facc15" class="mono" font-size="13" letter-spacing="2">&lt;ARCADE_LAB / CANVAS_ENGINE&gt;</text>
+  <text x="450" y="100" text-anchor="middle" fill="#ffffff" class="sans" font-size="38" font-weight="800" letter-spacing="4" filter="url(#neonGlow)">ARCADE</text>
+  <text x="450" y="130" text-anchor="middle" fill="#d8b4fe" class="sans" font-size="14" font-weight="500" letter-spacing="1.5">DETERMINISTIC 2D CANVAS GAME ENGINE &amp; CLASSIC ARCADE SUITE</text>
+
+  <!-- Divider -->
+  <line x1="220" y1="146" x2="680" y2="146" stroke="#2e1065" stroke-width="1" />
+
+  <!-- Pills -->
+  <g transform="translate(155, 162)">
+    <rect x="0" y="0" width="135" height="26" rx="6" fill="#1e1136" stroke="#facc15" stroke-width="1" stroke-opacity="0.6" />
+    <text x="67" y="17" text-anchor="middle" fill="#fef08a" class="mono" font-size="11">HTML5 Canvas</text>
+
+    <rect x="150" y="0" width="145" height="26" rx="6" fill="#1e1136" stroke="#c084fc" stroke-width="1" stroke-opacity="0.6" />
+    <text x="222" y="17" text-anchor="middle" fill="#e9d5ff" class="mono" font-size="11">60 FPS Game Loop</text>
+
+    <rect x="310" y="0" width="145" height="26" rx="6" fill="#1e1136" stroke="#c084fc" stroke-width="1" stroke-opacity="0.6" />
+    <text x="382" y="17" text-anchor="middle" fill="#e9d5ff" class="mono" font-size="11">Tilemap Matrix</text>
+
+    <rect x="470" y="0" width="125" height="26" rx="6" fill="#1e1136" stroke="#facc15" stroke-width="1" stroke-opacity="0.6" />
+    <text x="532" y="17" text-anchor="middle" fill="#fef08a" class="mono" font-size="11">Zero Deps</text>
+  </g>
+
+  <text x="450" y="214" text-anchor="middle" fill="#9333ea" class="mono" font-size="11">Pure JavaScript • Deterministic Collision Detection • Playable in Browser</text>
+</svg>
